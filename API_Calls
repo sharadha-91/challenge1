@@ -1,0 +1,108 @@
+POST	: http://localhost:8080/user
+I/P: BODY->Raw
+{
+    "firstName":"Dummy1",
+    "lastName":"dumm",
+    "email":"dumm@gmail.com",
+    "password":"dummi123"
+}
+
+O/P:
+{
+    "user": {
+        "id": 13,
+        "firstName": "Dummy1",
+        "lastName": "dumm",
+        "email": "dumm@gmail.com",
+        "password": "dummi123"
+    },
+    "responseStatus": "SUCCESS"
+}
+==============================================================
+DELETE  : http://localhost:8080/user/14
+O/P: "SUCCESS"
+=============================================================
+GET     : http://localhost:8080/user/12
+O/P:{
+    "id": 13,
+    "firstName": "Dummy1",
+    "lastName": "dumm",
+    "email": "dumm@gmail.com",
+    "password": "dummi123"
+}
+===============================================================
+GET		: http://localhost:8080/user/userslist
+O/P:
+[
+    {
+        "id": 5,
+        "firstName": "sharadha",
+        "lastName": "chelka",
+        "email": "sharadha@gmail.com",
+        "password": "123"
+    },
+    {
+        "id": 6,
+        "firstName": "Mahima",
+        "lastName": "anvi",
+        "email": "mahima@gmail.com",
+        "password": "mahi123"
+    },
+    {
+        "id": 8,
+        "firstName": "sandeep",
+        "lastName": "vanga",
+        "email": "vanga@gmail.com",
+        "password": "van123"
+    },
+    {
+        "id": 9,
+        "firstName": "yashna",
+        "lastName": "anya",
+        "email": "yashna@gmail.com",
+        "password": "yashu123"
+    },
+    {
+        "id": 10,
+        "firstName": "Hanuman",
+        "lastName": "srirama",
+        "email": "srirama@gmail.com",
+        "password": "srirama123"
+    },
+    {
+        "id": 12,
+        "firstName": "Abhilash",
+        "lastName": "gaddam",
+        "email": "abhilash@gmail.com",
+        "password": "abhi123"
+    },
+    {
+        "id": 13,
+        "firstName": "Dummy1",
+        "lastName": "dumm",
+        "email": "dumm@gmail.com",
+        "password": "dummi123"
+    }
+]
+=============================================================
+PUT		: http://localhost:8080/user/10
+I/P:
+{
+    "firstName" : "manasa",
+    "lastName" : "gaddam",
+    "email":"maansa@gmail.com",
+    "password":"manas123"
+    }
+    
+O/P:
+   {
+    "user": {
+        "id": 11,
+        "firstName": "manasa",
+        "lastName": "gaddam",
+        "email": "maansa@gmail.com",
+        "password": "manas123"
+    },
+    "responseStatus": "SUCCESS"
+}
+================================================================
